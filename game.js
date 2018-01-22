@@ -1,12 +1,10 @@
 var wins = 0;
 var losses = 0; 
 var guesses = 9;
-var options;
-var random;
-var chosen; 
-var picked;
-
 var options = ["a", "b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var random = "";
+var chosen = ""; 
+var picked = "";
 
 function randomize(){
 
@@ -30,14 +28,14 @@ document.onkeyup = function(event){
 	else 
 	{
 		guesses--;		
-		picked=picked + chosen +",";
+		picked +=  chosen +",";
 	}
 
 	if ( guesses === 0)
 	    {
 	    	losses ++;
 	        guesses = 9;
-	    	picked = null;
+	    	picked = "";
 	    	
 	    } 
 
